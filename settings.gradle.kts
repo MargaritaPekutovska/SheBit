@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "SheBit"
 include(":app")
+include(":crypto-home")
