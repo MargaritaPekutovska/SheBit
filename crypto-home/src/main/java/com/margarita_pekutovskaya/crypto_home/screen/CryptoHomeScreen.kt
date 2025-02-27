@@ -11,7 +11,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun CryptoHomeScreen(modifier: Modifier = Modifier) {
-    LazyColumn( modifier.padding(16.dp) ) {
+    LazyColumn(modifier.padding(16.dp)) {
         items(cryptoList) { crypto ->
             CryptoItem(crypto)
         }
