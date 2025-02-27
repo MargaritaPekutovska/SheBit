@@ -1,21 +1,26 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    id("org.jetbrains.kotlin.plugin.compose") version "2.0.0"
 }
 
 android {
-    namespace = "com.margarita_pekutovskaya.shebit"
+    namespace = "com.margarita_pekutovskaya.crypto_home"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.margarita_pekutovskaya.shebit"
         minSdk = 24
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
+    }
+
+    buildFeatures{
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.6.0"
     }
 
     buildTypes {
@@ -34,15 +39,10 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-    buildFeatures {
-        compose = true
-    }
 }
 
 dependencies {
-    implementation(project(":crypto-home"))
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.core.splashscreen)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
