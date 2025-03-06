@@ -29,4 +29,3 @@ class CoinDataClient {
         private val BASE_URL = " https://pro-api.coingecko.com/"
     }
 }
-
