@@ -17,4 +17,4 @@ class AuthenticationInterceptor : Interceptor {
 
 private const val HEADER_NAME_ACCEPT = "accept"
 private const val HEADER_VALUE_APPLICATION = "application/json"
-private const val HEADER_NAME_API_KEY = "x-cg-api-key"
+private const val HEADER_NAME_API_KEY = "x-cg-pro-api-key"

@@ -26,6 +26,6 @@ class CoinDataClient {
     }
 
     companion object {
-        private val BASE_URL = " https://pro-api.coingecko.com/"
+        private val BASE_URL = " https://api.coingecko.com/"
     }
 }
