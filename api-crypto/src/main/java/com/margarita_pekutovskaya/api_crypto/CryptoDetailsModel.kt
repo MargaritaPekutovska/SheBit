@@ -17,8 +17,6 @@ data class CryptoDetailsModel(
     val blockTimeInMinutes: Int? = null,
     @SerializedName("hashing_algorithm")
     val hashingAlgorithm: String? = null,
-    @SerializedName("categories")
-    val categories: String? = null,
     @SerializedName("preview_listing")
     val previewListing: Boolean? = null,
     @SerializedName("public_notice")

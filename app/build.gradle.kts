@@ -41,6 +41,7 @@ android {
 
 dependencies {
     implementation(project(":crypto-home"))
+    implementation(project(":api-crypto"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.core.splashscreen)
     implementation(libs.androidx.lifecycle.runtime.ktx)
