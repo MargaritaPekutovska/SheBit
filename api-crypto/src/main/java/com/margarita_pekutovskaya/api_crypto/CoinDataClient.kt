@@ -17,15 +17,11 @@ class CoinDataClient {
             .build()
 
         return Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(BuildConfig.COIN_GEKO_BASE_URL)
             .addConverterFactory(
                 GsonConverterFactory.create()
             )
             .client(client)
             .build()
-    }
-
-    companion object {
-        private val BASE_URL = " https://api.coingecko.com/"
     }
 }
