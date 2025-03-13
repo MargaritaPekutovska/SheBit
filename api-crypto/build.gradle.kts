@@ -20,6 +20,12 @@ android {
             "COIN_GEKO_API_KEY",
             "\"${getLocalProperty("COIN_GEKO_API_KEY")}\""
         )
+
+        buildConfigField(
+            "String",
+            "COIN_GEKO_BASE_URL",
+            "\"https://api.coingecko.com/\""
+        )
     }
 
     buildTypes {
