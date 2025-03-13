@@ -6,6 +6,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class CoinDataClient {
 
+    fun provideCoinDataClient(): CoinGeckoApiService {
+        val retrofit = getInstance()
+        return retrofit.create(CoinGeckoApiService::class.java)
+    }
+
     private fun getInstance(): Retrofit {
         val client = OkHttpClient.Builder()
             .addInterceptor(AuthenticationInterceptor())
@@ -18,11 +23,6 @@ class CoinDataClient {
             )
             .client(client)
             .build()
-    }
-
-    fun provideCoinDataClient(): CoinGeckoApiService {
-        val retrofit = getInstance()
-        return retrofit.create(CoinGeckoApiService::class.java)
     }
 
     companion object {
