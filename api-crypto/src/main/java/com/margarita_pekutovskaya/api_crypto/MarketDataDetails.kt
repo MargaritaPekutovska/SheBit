@@ -3,55 +3,55 @@ import com.google.gson.annotations.SerializedName
 
 data class MarketDataDetails(
     @SerializedName("id")
-    var id: String? = null,
+    val id: String? = null,
     @SerializedName("symbol")
-    var symbol: String? = null,
+    val symbol: String? = null,
     @SerializedName("name")
-    var name: String? = null,
+    val name: String? = null,
     @SerializedName("image")
-    var image: String? = null,
+    val image: String? = null,
     @SerializedName("current_price")
-    var currentPrice: Int? = null,
+    val currentPrice: Int? = null,
     @SerializedName("market_cap")
-    var marketCap: Int? = null,
+    val marketCap: Int? = null,
     @SerializedName("market_cap_rank")
-    var marketCapRank: Int? = null,
+    val marketCapRank: Int? = null,
     @SerializedName("fully_diluted_valuation")
-    var fullyDilutedValuation: Int? = null,
+    val fullyDilutedValuation: Int? = null,
     @SerializedName("total_volume")
-    var totalVolume: Int? = null,
+    val totalVolume: Int? = null,
     @SerializedName("high_24h")
-    var high24h: Int? = null,
+    val high24h: Int? = null,
     @SerializedName("low_24h")
-    var low24h: Int? = null,
+    val low24h: Int? = null,
     @SerializedName("price_change_24h")
-    var priceChange24h: Double? = null,
+    val priceChange24h: Double? = null,
     @SerializedName("price_change_percentage_24h")
-    var priceChangePercentage24h: Double? = null,
+    val priceChangePercentage24h: Double? = null,
     @SerializedName("market_cap_change_24h")
-    var marketCapChange24h: Int? = null,
+    val marketCapChange24h: Int? = null,
     @SerializedName("market_cap_change_percentage_24h")
-    var marketCapChangePercentage24h: Double? = null,
+    val marketCapChangePercentage24h: Double? = null,
     @SerializedName("circulating_supply")
-    var circulatingSupply: Int? = null,
+    val circulatingSupply: Int? = null,
     @SerializedName("total_supply")
-    var totalSupply: Int? = null,
+    val totalSupply: Int? = null,
     @SerializedName("max_supply")
-    var maxSupply: Int? = null,
+    val maxSupply: Int? = null,
     @SerializedName("ath")
-    var ath: Int? = null,
+    val ath: Int? = null,
     @SerializedName("ath_change_percentage")
-    var athChangePercentage: Double? = null,
+    val athChangePercentage: Double? = null,
     @SerializedName("ath_date")
-    var athDate: String? = null,
+    val athDate: String? = null,
     @SerializedName("atl")
-    var atl: Double? = null,
+    val atl: Double? = null,
     @SerializedName("atl_change_percentage")
-    var atlChangePercentage: Double? = null,
+    val atlChangePercentage: Double? = null,
     @SerializedName("atl_date")
-    var atlDate: String? = null,
+    val atlDate: String? = null,
     @SerializedName("roi")
-    var roi: String? = null,
+    val roi: String? = null,
     @SerializedName("last_updated")
-    var lastUpdated: String? = null
+    val lastUpdated: String? = null
 )
