@@ -8,9 +8,14 @@ import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
-fun CryptoHomeScreen(modifier: Modifier = Modifier) {
+fun CryptoHomeScreen(
+    modifier: Modifier = Modifier,
+    viewModel: CryptoHomeViewModel = viewModel(factory=CryptoHomeViewModel.Factory)
+    ) {
+
     LazyColumn(modifier.padding(16.dp)) {
         items(cryptoList) { crypto ->
             CryptoItem(crypto)

@@ -6,5 +6,11 @@ enum class CryptoCoin(val coinName: String) {
     XRP("ripple"),
     SOLANA("solana"),
     ADA("cardano"),
-    DOGECOIN("dogecoin"),
+    DOGECOIN("dogecoin");
+
+    companion object {
+        fun getCoinIds(): String {
+            return entries.joinToString(",") { it.coinName }
+        }
+    }
 }

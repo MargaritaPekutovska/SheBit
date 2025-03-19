@@ -10,7 +10,7 @@ interface CoinGeckoApiService {
 
     @GET("api/v3/coins/markets")
     suspend fun fetchMarketData(
-        @Query("vs_currency") currency:String,
-        @Query("ids") coinIds: String
-    ):List<MarketDataDetails>
+        @Query("vs_currency") currency: String,
+        @Query(value = "ids") coinIds: String
+    ): List<MarketDataDetails>
 }
