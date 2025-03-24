@@ -16,25 +16,27 @@ class CryptoHomeViewModel(
     private val coinDataRepository: CoinDataRepository
 ) : ViewModel() {
 
-    var dataCoin by mutableStateOf<List<MarketDataDetails>> (emptyList())
-    private set
+    var dataCoin by mutableStateOf<List<MarketDataDetails>>(emptyList())
+        private set
 
     init {
         viewModelScope.launch {
             try {
                 val result: List<MarketDataDetails> = coinDataRepository.getMarketDataDetails(
-                    currency = "usd",
+                    currency = CurrencyType.USD.toString(),
                     coinIds = CryptoCoin.getCoinIds()
                 )
                 dataCoin = result
-                Log.d("CryptoHomeViewModel", "Data fetched successfully: $result")
+                Log.d(LOG_TAG, "Data fetched successfully: $result")
             } catch (e: Exception) {
-                Log.e("CryptoHomeViewModel", "Error fetching market data", e)
+                Log.e(LOG_TAG, "Error fetching market data", e)
             }
         }
     }
 
     companion object {
+
+        const val LOG_TAG = "CryptoHomeViewModel"
 
         val Factory: ViewModelProvider.Factory = object : ViewModelProvider.Factory {
             @Suppress("UNCHECKED_CAST")
