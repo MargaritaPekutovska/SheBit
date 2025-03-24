@@ -9,23 +9,23 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.margarita_pekutovskaya.api_crypto.MarketDataDetails
 
 @Composable
 fun CryptoHomeScreen(
     modifier: Modifier = Modifier,
-    viewModel: CryptoHomeViewModel = viewModel(factory=CryptoHomeViewModel.Factory)
-    ) {
-
+    viewModel: CryptoHomeViewModel = viewModel(factory = CryptoHomeViewModel.Factory),
+) {
     LazyColumn(modifier.padding(16.dp)) {
-        items(cryptoList) { crypto ->
+        items(viewModel.dataCoin) { crypto: MarketDataDetails ->
             CryptoItem(crypto)
         }
     }
 }
 
 @Composable
-private fun CryptoItem(crypto: Crypto) {
-    Text(text = "${crypto.name}:${crypto.price} USD")
+private fun CryptoItem(crypto: MarketDataDetails) {
+    Text(text = "${crypto.name}:${crypto.currentPrice} USD")
 }
 
 @Preview(showBackground = true)
