@@ -23,7 +23,7 @@ class CryptoHomeViewModel(
         viewModelScope.launch {
             try {
                 val result: List<MarketDataDetails> = coinDataRepository.getMarketDataDetails(
-                    currency = CurrencyType.USD.toString(),
+                    currency = CurrencyType.USD.stringValue,
                     coinIds = CryptoCoin.getCoinIds()
                 )
                 dataCoin = result
