@@ -25,7 +25,7 @@ fun CryptoHomeScreen(
 
 @Composable
 private fun CryptoItem(crypto: MarketDataDetails) {
-    Text(text = "${crypto.name}:${crypto.currentPrice} USD")
+    Text(text = "${crypto.name}:${crypto.currentPrice} ${CurrencyType.USD}")
 }
 
 @Preview(showBackground = true)
